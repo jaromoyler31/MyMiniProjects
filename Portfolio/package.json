@@ -1,0 +1,23 @@
+{
+  "name": "myminiprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaromoyler31/MyMiniProjects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaromoyler31/MyMiniProjects/issues"
+  },
+  "homepage": "https://github.com/jaromoyler31/MyMiniProjects#readme",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}

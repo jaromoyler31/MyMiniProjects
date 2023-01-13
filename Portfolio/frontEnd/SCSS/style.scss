@@ -1,5 +1,350 @@
-@use "_var";
+@use '_var';
 
-.color{
-    color:var.$light-blue;
+@mixin text($fontcolor: #fff, $fontsize:25px){
+    color:$fontcolor;
+    font-size:$fontsize;
+    text-decoration: none;
+
+}
+
+@mixin speed($speed:1s){    
+    transition:$speed;
+}
+
+@media only screen and (max-width:1920px){
+
+    
+    .filter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header{
+
+        width:100%;
+        background-color: var.$primary-black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        
+    }
+    .left{
+        padding:var.$pat;
+        padding-left:30px;
+    }
+    .right{
+        a{
+            @include text();
+            padding:var.$pat;
+            transition:1s;
+            padding-right:30px;
+    
+        }
+        a:hover{
+            color:var.$light-blue;
+            @include speed();
+        }
+    }
+    
+    body{
+        margin:0;
+        background-color:var.$secondary-black;
+        
+    }
+    
+    .fit{
+        display: block;
+        margin:0 auto;
+        transition:0.3s;
+        object-fit:cover;
+        border-radius: 50%;
+        
+    }
+    
+    
+    .middle{
+        display:flex;
+        flex-direction: column ;
+        justify-content: center;
+        align-items:center;
+        text-align: center;
+        @include text();
+        padding-bottom: 200px;
+        position: relative;
+        top: 120px;
+        
+    
+        .big{
+            padding-top:10px;
+            @include text(#fff,40px)
+        }
+    }
+    
+    
+    .quote{
+        background-color: var.$light-blue;
+        color:#fff;
+        @include text();
+        padding:var.$pat;
+        margin-top:var.$pat;
+        text-align:center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+        i{
+            @include text(var.$primary-white ,var.$pat);
+        }
+    }
+    
+
+    .links{
+        @include text();
+        :hover{
+            @include speed();
+            @include text(var.$light-blue);
+            cursor: pointer;
+        }
+    }
+    
+    .pics{
+        margin-top:10px;
+        border: 6px solid var.$light-blue;
+        object-fit: cover;
+        opacity: .4;
+        transition: 1s;
+        
+    }
+    .pics:hover{
+        opacity: 1.0;
+        @include speed();
+    }
+    
+    
+}
+
+@media only screen and (max-width:1440px){
+
+    .filter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header{
+
+        width:100%;
+        background-color: var.$primary-black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        
+    }
+    .left{
+        padding:var.$pat;
+        padding-left:30px;
+    }
+    .right{
+        a{
+            @include text();
+            padding:var.$pat;
+            transition:1s;
+            padding-right:30px;
+    
+        }
+        a:hover{
+            color:var.$light-blue;
+            @include speed();
+        }
+    }
+    
+    body{
+        margin:0;
+        background-color:var.$secondary-black;
+        
+    }
+    
+    .fit{
+        display: block;
+        margin:0 auto;
+        transition:0.3s;
+        object-fit:cover;
+        border-radius: 50%;
+        
+    }
+    
+    
+    .middle{
+        display:flex;
+        flex-direction: column ;
+        justify-content: center;
+        align-items:center;
+        text-align: center;
+        @include text();
+        padding-bottom: 200px;
+        position: relative;
+        top: 120px;
+        
+    
+        .big{
+            padding-top:10px;
+            @include text(#fff,40px)
+        }
+    }
+    
+    
+    .quote{
+        background-color: var.$light-blue;
+        color:#fff;
+        @include text();
+        padding:var.$pat;
+        margin-top:var.$pat;
+        text-align:center;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        flex-direction: column;
+        
+        
+        i{
+            @include text(var.$primary-white ,var.$pat);
+        }
+    }
+    
+
+    .links{
+        @include text();
+        :hover{
+            @include speed();
+            @include text(var.$light-blue);
+            cursor: pointer;
+        }
+    }
+    
+    .pics{
+        margin-top:10px;
+        border: 6px solid var.$light-blue;
+        object-fit: cover;
+        opacity: .4;
+        transition: 1s;
+        
+    }
+    .pics:hover{
+        opacity: 1.0;
+        @include speed();
+    }
+    
+    
+}
+
+@media only screen and (max-width:435px){
+    .filter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header{
+        width:100%;
+        background-color: var.$primary-black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        
+    }
+    .left{
+        padding:var.$pat;
+        padding-left:30px;
+    }
+    .right{
+        a{
+            @include text($fontcolor: #fff, $fontsize:12.5px);
+            padding:10px;
+            transition:1s;
+            padding-right:30px;
+    
+        }
+        a:hover{
+            color:var.$light-blue;
+            @include speed();
+        }
+    }
+    body{
+        margin:0;
+        background-color:var.$secondary-black;
+        
+    }
+    .fit{
+        display: block;
+        margin:0 auto;
+        transition:0.3s;
+        object-fit:cover;
+        border-radius: 50%;
+    }
+    
+    
+    .middle{
+        display:flex;
+        flex-direction: column ;
+        justify-content: center;
+        align-items:center;
+        text-align: center;
+        @include text();
+        padding-bottom: 200px;
+        position: relative;
+        top: 120px;
+        
+    
+        .big{
+            padding-top:10px;
+            @include text(#fff,40px)
+        }
+    }
+    
+    .quote{
+        background-color: var.$light-blue;
+        color:#fff;
+        @include text($fontcolor: #fff, $fontsize:15px);
+        padding:var.$pat;
+        margin-top:var.$pat;
+        text-align:center;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        flex-direction: column;
+        
+        
+        i{
+            @include text(var.$primary-white ,var.$pat);
+        }
+    }
+
+    .links{
+        @include text();
+        :hover{
+            @include speed();
+            @include text(var.$light-blue);
+            cursor: pointer;
+        }
+    }
+    
+    .pics{
+        margin-top:10px;
+        border: 6px solid var.$light-blue;
+        object-fit: cover;
+        opacity: .4;
+        transition: 1s;
+        
+    }
+    .pics:hover{
+        opacity: 1.0;
+        @include speed();
+    }
+    
+    
 }

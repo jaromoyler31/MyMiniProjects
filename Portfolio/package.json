@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jaromoyler31/MyMiniProjects#readme",
   "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
     "scss": "^0.2.4"
   }
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d02def751.js" crossorigin="anonymous"></script>
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="index.html">
+                <img class="pics" src="IMG/BlueLogo.png" >
+            </a>
+        </div>
+        <div class="right">
+            <a href="/about">About Me</a>
+            <a href="/projects">Projects</a>
+            
+        </div>
+    </div>
+
+    <div class="middle">    
+        <img src="IMG/Jarom3.jpg" id="image" width="200px" height="200px" class="fit" >
+        <a class="big">Web Developer</a>
+        <a>Jarom Oyler</a>
+        <script type="text/javascript">
+            let image = document.getElementById('image');
+            let images = ["IMG/Jarom.jpg","IMG/Jarom1.jpg","IMG/Jarom2.jpg","IMG/Jarom3.jpg"]
+            setInterval(function(){
+                let random = Math.floor(Math.random()* 4);
+                image.src = images[random];
+            } ,2000);
+        </script>
+
+    </div>
+
+    <div class="quote">
+        <a>"Failure is only the opportunity to begin again, only this time, more wisely" -Uncle Iroh</a>
+        <a>“When we hit our lowest point, we are open to the greatest change.”- Aang</a>
+        <a>Avatar The Last Airbender</a>
+    </div>
+    
+    
+    <div class="about">
+        <div class="title">About Me</div>
+        <hr class="line">
+        <p>My First Experiences With Coding was in Middle school. Which was not very complex due to being simple block coding and there was some limitation. So when I got to High School I decided to take ever Computer Programming class. I learned Languages From Html Css to Python And JavaScript. Even Though I learned a lot, I decided There Was More To Learn and Decided to go to MTECH, Where I am currently learning tons on Web development.</p>
+    </div>
+    
+    <table>
+        <tr>
+            <td>
+                <div class="title">Education</div>
+                <hr class="line">
+                <div class="text">
+                    <h1>MTECH</h2>
+                    <h2>Computer Programming</h4>
+                    <a>8/2022 - Present  lehi, Utah</a>
+                    <ul>
+                        Courses:
+                        &#x2022;Introduction to Web Development
+                        &#x2022;Javascript
+                        &#x2022;React.js
+                        &#x2022;BackendCoding
+                        &#x2022;Docker
+                    </ul>
+                </div>
+                
+                <div class="text">
+                    <h1>Timpview High School</h2>
+                    <h2>Computer Programming Basics</h4>
+                    <a>8/2019 - Present  Provo, Utah</a>
+                    <ul>
+                        Courses:
+                        &#x2022;Robotics 1
+                        &#x2022;Robotics 2
+                        &#x2022;Computer Programming 1
+                        &#x2022;Computer Programming 2 <br>
+                        &#x2022;Gaming Development Fundamentals 1
+                    </ul>
+                </div>
+
+            </td>
+            <td>
+                <div class="title">Skills</div>
+                <hr class="line">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

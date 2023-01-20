@@ -15,6 +15,10 @@ app.get("/", (req,res)=>{
 
 app.get("/about", (req,res)=>{
     res.sendFile(path.join(__dirname+"/frontEnd/about.html"))
+})  
+
+app.get("/projects", (req,res)=>{
+    res.sendFile(path.join(__dirname+"/frontEnd/project.html"))
 })
 
 app.listen(3000, ()=>{

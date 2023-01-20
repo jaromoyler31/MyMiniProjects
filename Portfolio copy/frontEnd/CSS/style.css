@@ -111,6 +111,17 @@ body {
   padding-right: 50px;
 }
 
+.project {
+  padding-top: 60px;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -120,13 +131,32 @@ body {
   text-decoration: none;
 }
 
-table {
+.split {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
   padding-top: 50px;
   width: 100%;
+  gap: 3%;
 }
 
-td, th {
-  text-align: left;
+.split1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-top: 50px;
+  width: 100%;
+  gap: 3%;
+}
+
+.r1, .l1 {
+  padding: 8px;
+  width: 50%;
+}
+
+.r, .l {
   padding: 8px;
   width: 50%;
 }
@@ -142,24 +172,39 @@ td, th {
   padding-top: 15px;
 }
 
+.set {
+  padding-top: 20px;
+}
+
+.pad {
+  padding-top: 70px;
+}
+
+.skill {
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom {
+  padding-bottom: 40px;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
+.projopic {
+  width: 350px;
+}
+
 @media only screen and (max-width: 1920px) {
-  .filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .header {
-    width: 100%;
-    background-color: #231F20;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-  }
-  .left {
-    padding: 20px;
-    padding-left: 30px;
-  }
   .right a {
     color: #fff;
     font-size: 25px;
@@ -258,46 +303,44 @@ td, th {
     width: 300px;
   }
 }
-@media only screen and (max-width: 435px) {
-  .filter {
+@media only screen and (max-width: 888px) {
+  .split1 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .header {
+    flex-direction: column;
+    padding-top: 50px;
     width: 100%;
-    background-color: #231F20;
+  }
+  .r1, .l1 {
+    padding-top: 10px;
+    padding: 8px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .split {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    z-index: 1;
+    flex-direction: column;
+    padding-top: 50px;
+    width: 100%;
   }
-  .left {
-    padding: 20px;
-    padding-left: 30px;
+  .r, .l {
+    padding-top: 10px;
+    padding: 8px;
+    width: 100%;
   }
+  .projopic {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 435px) {
   .right a {
     color: #fff;
     font-size: 12.5px;
     text-decoration: none;
-    padding: 10px;
-    transition: 1s;
-    padding-right: 30px;
-  }
-  .right a:hover {
-    color: #1f6eeb;
-    transition: 1s;
-  }
-  body {
-    margin: 0;
-    background-color: #2E292A;
-  }
-  .fit {
-    display: block;
-    margin: 0 auto;
-    transition: 0.3s;
-    object-fit: cover;
-    border-radius: 50%;
   }
   .middle {
     display: flex;
@@ -319,59 +362,35 @@ td, th {
     text-decoration: none;
   }
   .quote {
-    background-color: #1f6eeb;
-    color: #fff;
     color: #fff;
     font-size: 15px;
     text-decoration: none;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    flex-direction: column;
   }
   .quote i {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
   }
-  .links {
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-  }
-  .links :hover {
-    transition: 1s;
-    color: #1f6eeb;
-    font-size: 25px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .pics {
-    width: 65px;
-  }
   .about {
-    padding-top: 50px;
     color: #fff;
     font-size: 15px;
     text-decoration: none;
-    text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #1f6eeb;
     font-size: 30px;
     text-decoration: none;
   }
   .line {
-    color: #1f6eeb;
     width: 125px;
+  }
+  .skill {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .projopic {
+    width: 175px;
   }
 }
 

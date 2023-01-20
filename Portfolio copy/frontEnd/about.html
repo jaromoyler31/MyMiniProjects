@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d02def751.js" crossorigin="anonymous"></script>
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="index.html">
+                <img class="pics" href="" src="IMG/BlueLogo.png" >
+            </a>
+        </div>
+        <div class="right">
+            <a href="/about">About Me</a>
+            <a href="/projects">Projects</a>
+        </div>
+    </div>
+
+    <div class="middle">    
+        <img src="IMG/Jarom3.jpg" id="image" width="200px" height="200px" class="fit" >
+        <a class="big">Web Developer</a>
+        <a>Jarom Oyler</a>
+        <script type="text/javascript">
+            let image = document.getElementById('image');
+            let images = ["IMG/Jarom.jpg","IMG/Jarom1.jpg","IMG/Jarom2.jpg","IMG/Jarom3.jpg"]
+            setInterval(function(){
+                let random = Math.floor(Math.random()* 4);
+                image.src = images[random];
+            } ,2000);
+        </script>
+
+    </div>
+
+    <div class="quote">
+        <a>"Failure is only the opportunity to begin again, only this time, more wisely" -Uncle Iroh</a>
+        <a>Avatar The Last Airbender</a>
+    </div>
+    
+    
+    <div class="about">
+        <div class="title">About Me</div>
+        <hr class="line">
+        <p>My First Experiences With Coding was in Middle school. Which was not very complex due to being simple block coding and there was some limitation. So when I got to High School I decided to take ever Computer Programming class. I learned Languages From Html Css to Python And JavaScript. Even Though I learned a lot, I decided There Was More To Learn and Decided to go to MTECH, Where I am currently learning tons on Web development.</p>
+    </div>
+    
+    <div class="split">
+        <div class="r">
+            <div class="title">Education</div>
+            <hr class="line">
+            <div class="text">
+                <h1>MTECH</h2>
+                <h2>Computer Programming</h4>
+                <a>8/2022 - Present  lehi, Utah</a>
+                <ul>
+                    Courses:
+                    &#x2022;Introduction to Web Development
+                    &#x2022;Javascript
+                    &#x2022;React.js
+                    &#x2022;BackendCoding
+                    &#x2022;Docker
+                </ul>
+            </div>
+
+            <div class="text">
+                <h1>Timpview High School</h2>
+                <h2>Computer Programming Basics</h4>
+                <a>8/2019 - Present  Provo, Utah</a>
+                <ul>
+                    Courses:
+                    &#x2022;Robotics 1
+                    &#x2022;Robotics 2
+                    &#x2022;Computer Programming 1
+                    &#x2022;Computer Programming 2 <br>
+                    &#x2022;Gaming Development Fundamentals 1<br>
+                    &#x2022;AP Compuer Science
+                </ul>
+            </div>
+        </div>
+
+        <div class="l">
+            <div class="title">Skills</div>
+            <hr class="line">
+            <div class="skill">
+                <div class="set">
+                    <a>Creativity</a> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <div class="set">
+                    <a>Problem Solving</a>
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-regular fa-circle"></i>                    
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+                <div class="set">
+                    <a>Leadership </a>
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-solid fa-circle"></i> 
+                    <i class="fa-regular fa-circle"></i>
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+            </div>
+
+            <div class="title pad">Interests</div>
+            <hr class="line">
+            <div class="skill">
+                <a class="set">&#x2022; Ultimate Frisbee</a>
+                <a class="set">&#x2022; Board Games</a>
+                <a class="set">&#x2022; Coding</a>
+                <a class="set">&#x2022; Audio Book</a>
+            </div>   
+        </div>
+    </div>
+
+    <div class="quote">
+        <a>"I guess destiny isn't the path chosen for us, but the path we choose for ourselves." —Megamind</a>
+        <a>Megamind</a>
+    </div>
+
+    <div class="split bottom" >
+        <div class="r">
+            <div class="title">Contact</div>
+            <hr class="line">
+            <div class="contact text" >
+                <div><a class="text"><i class="fa-solid fa-phone"> 385-201-9711</i></a><br></div>
+                <div class="text"><a class="text" href="mailto:jarroyler@gmail.com?subject=Interview" target="_blank"><i class="fa-solid fa-envelope"> jarroyler@gmail.com</i></a></div>
+                <div class="text"><a class="text"><i class="fa-solid fa-location-dot"> Provo, Utah, United States</i></a></div>
+                <div class="text"><a class="text" href="https://github.com/jaromoyler31"><i class="fa-brands fa-github"> github.com/jaromoyler31</i></a></div>
+                <div class="text"><a class="text" href="https://www.linkedin.com/in/jarom-oyler-957b96248/"><i class="fa-brands fa-linkedin"> https://www.linkedin.com/in/jarom-oyler-957b96248/</i></a></div>
+            </div>
+        </div>
+        <div class="l text">
+            <div class="title">CP Languages</div>
+            <hr class="line">
+            <div class="text">&#x2022; HTML</div>
+            <div class="text">&#x2022; CSS</div>
+            <div class="text">&#x2022; JavaScript</div>
+            <div class="text">&#x2022; React</div>
+            <div class="text">&#x2022; Node</div>
+        </div>
+    </div>
+   
+</body>
+</html> 

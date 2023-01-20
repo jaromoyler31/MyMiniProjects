@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d02def751.js" crossorigin="anonymous"></script>
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="index.html">
+                <img class="pics" src="IMG/BlueLogo.png" >
+            </a>
+        </div>
+        <div class="right">
+            <a href="/about">About Me</a>
+            <a href="/projects">Projects</a>
+            
+        </div>
+    </div>
+
+    <div class="middle">    
+        <img src="IMG/Jarom3.jpg" id="image" width="200px" height="200px" class="fit" >
+        <a class="big">Web Developer</a>
+        <a>Jarom Oyler</a>
+        <script type="text/javascript">
+            let image = document.getElementById('image');
+            let images = ["IMG/Jarom.jpg","IMG/Jarom1.jpg","IMG/Jarom2.jpg","IMG/Jarom3.jpg"]
+            setInterval(function(){
+                let random = Math.floor(Math.random()* 4);
+                image.src = images[random];
+            } ,2000);
+        </script>
+
+    </div>
+
+    <div class="quote">
+        <a>"Turns out all we Needed was a little more of this." -Stoick</a>
+        <a>"You Just Gestured to all of me." -Hiccup</a>
+        <a>How to Trian Your Dragon</a>
+    </div>
+    
+
+
+    
+</body>
+</html>

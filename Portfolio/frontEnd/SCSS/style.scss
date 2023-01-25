@@ -48,7 +48,8 @@
 body{
     margin:0;
     background-color:var.$secondary-black;
-    
+    font-family: 'Comic Neue', cursive;
+
 }
 
 .fit{
@@ -101,11 +102,17 @@ body{
 
 .links{
     @include text();
-    :hover{
-        @include speed();
-        @include text(var.$light-blue);
-        cursor: pointer;
-    }
+    transition:1s;
+}
+
+.links:hover{
+    @include speed();
+    color:var.$light-blue;
+    cursor: pointer;
+}
+
+.gitlink{
+    @include text(#fff, 22px)
 }
 
 .pics{
@@ -135,7 +142,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    @include text(var.$light-blue, 20px);
+    @include text(var.$light-blue, 40px);
 }
 
 .split{
@@ -153,7 +160,7 @@ body{
     justify-content: center;
     align-items:flex-start;
     flex-direction: row;
-    padding-top:50px;
+    padding-top:30px;
     width: 100%;
     gap:3%;
 }
@@ -174,6 +181,7 @@ body{
 }
 
 .text{
+    
     color:#fff;
     text-align: center;
     padding-top:15px;
@@ -206,109 +214,9 @@ body{
 .projopic{
     width:350px;
 }
+.rank{
+    font-size: 20px;
 
-@media only screen and (max-width:1920px){
-    
-    .right{
-        a{
-            @include text();
-            padding:var.$pat;
-            transition:1s;
-            padding-right:30px;
-    
-        }
-        a:hover{
-            color:var.$light-blue;
-            @include speed();
-        }
-    }
-    
-    body{
-        margin:0;
-        background-color:var.$secondary-black;
-        
-    }
-    
-    .fit{
-        display: block;
-        margin:0 auto;
-        transition:0.3s;
-        object-fit:cover;
-        border-radius: 50%;
-        
-    }
-    
-    
-    .middle{
-        display:flex;
-        flex-direction: column ;
-        justify-content: center;
-        align-items:center;
-        text-align: center;
-        @include text();
-        padding-bottom: 200px;
-        position: relative;
-        top: 120px;
-        
-    
-        .big{
-            padding-top:10px;
-            @include text(#fff,40px)
-        }
-    }
-    
-    
-    .quote{
-        background-color: var.$light-blue;
-        color:#fff;
-        @include text();
-        padding:var.$pat;
-        margin-top:var.$pat;
-        text-align:center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        
-        i{
-            @include text(var.$primary-white ,var.$pat);
-        }
-    }
-    
-
-    .links{
-        @include text();
-        :hover{
-            @include speed();
-            @include text(var.$light-blue);
-            cursor: pointer;
-        }
-    }
-    
-    .pics{
-        width:100px
-    }
-    
-    .about{
-        
-        padding-top:50px;
-        @include text();
-        text-align: center;
-        padding-left:50px;
-        padding-right:50px;
-        
-    }
-    .title{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include text(var.$light-blue, 40px);
-    }
-    .line{
-        color:var.$light-blue;
-        width:300px;
-    }
-    
 }
 
 @media only screen and (max-width:888px){
@@ -317,7 +225,6 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top:50px;
         width: 100%;
     }
     
@@ -325,6 +232,9 @@ body{
         padding-top:10px;
         padding:8px;
         width: 100%;
+    }
+    .text{
+        font-size:20px;
     }
 }
 
@@ -347,7 +257,11 @@ body{
     .projopic{
         width:300px;
     }
+    .text{
+        font-size:15px;
+    }
 }
+
 
 @media only screen and (max-width:435px){
     
@@ -401,6 +315,4 @@ body{
         width:175px;
     }
 }
-
-
 

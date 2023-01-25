@@ -34,6 +34,7 @@
 body {
   margin: 0;
   background-color: #2E292A;
+  font-family: "Comic Neue", cursive;
 }
 
 .fit {
@@ -88,13 +89,19 @@ body {
   color: #fff;
   font-size: 25px;
   text-decoration: none;
+  transition: 1s;
 }
-.links :hover {
+
+.links:hover {
   transition: 1s;
   color: #1f6eeb;
-  font-size: 25px;
-  text-decoration: none;
   cursor: pointer;
+}
+
+.gitlink {
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
 }
 
 .pics {
@@ -127,7 +134,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #1f6eeb;
-  font-size: 20px;
+  font-size: 40px;
   text-decoration: none;
 }
 
@@ -146,7 +153,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
-  padding-top: 50px;
+  padding-top: 30px;
   width: 100%;
   gap: 3%;
 }
@@ -204,118 +211,25 @@ body {
   width: 350px;
 }
 
-@media only screen and (max-width: 1920px) {
-  .right a {
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 20px;
-    transition: 1s;
-    padding-right: 30px;
-  }
-  .right a:hover {
-    color: #1f6eeb;
-    transition: 1s;
-  }
-  body {
-    margin: 0;
-    background-color: #2E292A;
-  }
-  .fit {
-    display: block;
-    margin: 0 auto;
-    transition: 0.3s;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  .middle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-    padding-bottom: 200px;
-    position: relative;
-    top: 120px;
-  }
-  .middle .big {
-    padding-top: 10px;
-    color: #fff;
-    font-size: 40px;
-    text-decoration: none;
-  }
-  .quote {
-    background-color: #1f6eeb;
-    color: #fff;
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .quote i {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  .links {
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-  }
-  .links :hover {
-    transition: 1s;
-    color: #1f6eeb;
-    font-size: 25px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .pics {
-    width: 100px;
-  }
-  .about {
-    padding-top: 50px;
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1f6eeb;
-    font-size: 40px;
-    text-decoration: none;
-  }
-  .line {
-    color: #1f6eeb;
-    width: 300px;
-  }
+.rank {
+  font-size: 20px;
 }
+
 @media only screen and (max-width: 888px) {
   .split1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 50px;
     width: 100%;
   }
   .r1, .l1 {
     padding-top: 10px;
     padding: 8px;
     width: 100%;
+  }
+  .text {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 660px) {
@@ -334,6 +248,9 @@ body {
   }
   .projopic {
     width: 300px;
+  }
+  .text {
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 435px) {

@@ -1,0 +1,43 @@
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  width: 110px;
+  height: 180px;
+  border: 1px solid black;
+  margin: 3px;
+  transition: 1s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.cube {
+  border: 3px solid rgb(38, 61, 147);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 45px;
+  top: 40px;
+  background-color: #959ECB;
+  box-shadow: rgba(0, 0, 0, 0.15) 3.95px 2.95px 3.6px;
+}
+.cube .button {
+  margin-top: 4px;
+  border-radius: 10px;
+  background-color: rgb(38, 61, 147);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.95px 2.95px 2.6px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -21,6 +21,6 @@ app.get("/projects", (req,res)=>{
     res.sendFile(path.join(__dirname+"/frontEnd/project.html"))
 })
 
-app.listen(3000, ()=>{
-    console.log("Listening To Port 3000")
+app.listen(3200, ()=>{
+    console.log("Listening To Port 3200")
 })

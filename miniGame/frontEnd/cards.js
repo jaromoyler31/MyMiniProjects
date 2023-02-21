@@ -7,13 +7,18 @@ var cardlist = [
     "./IMG/1.jpeg",
     "./IMG/3.jpeg",
     "./IMG/3.jpeg",
-    "./IMG/Wild.jpeg",
+    "./IMG/6.jpeg",
     "./IMG/4.jpeg",
     
 ]
 
 var cardSet 
-var cardSet1 = [[],[],[],[]] 
+var cardSet1 = [
+    [null,null,null,null],
+    [null,null,null,null],
+    [null,null,null,null],
+    [null,null,null,null]
+] 
 var board = []
 var height = 4
 var num = 1
@@ -41,7 +46,7 @@ function shuffleCards(){
         let temp = cardSet[i]
         cardSet[i] = cardSet[j]
         cardSet[j] = temp
-    
+
     
     }
 }

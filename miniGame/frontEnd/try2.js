@@ -1,8 +1,12 @@
-
-
 const nums = [1, 1, 1,4, 2, 2, 2, 3, 3, 6];
 var lengthers = 1
 var numhide = 1
+var cardImg
+var cardSelected1
+var cardSelected2
+var cardSelected3
+var cardSelected4
+var cardRevial
 var pyramid = [
     [null],
     [null,null],
@@ -34,8 +38,7 @@ window.onload =function(){
 
 // Define helper functions to check guidelines
 const isAdjacentToOne = (i, j) => {
-    const adjacentCoords = [    [i-1, j-1], [i-1, j], [i-1, j+1], [i, j-1], [i, j+1], [i+1, j], [i+1, j+1], [i+1, j-1]
-    ];
+    const adjacentCoords = [    [i-1, j-1], [i-1, j], [i, j-1], [i, j+1], [i+1, j], [i+1, j+1]];
     for (const [row, col] of adjacentCoords) {
       if (row >= 0 && row < pyramid.length && col >= 0 && col < pyramid[row].length) {
         if (pyramid[row][col] === 1) {
@@ -154,7 +157,6 @@ function running(){
 
     }
 
-
     for (let i = 0; i < pyramid.length; i++) {
         for (let j = 0; j < pyramid[i].length; j++) {
             if (pyramid[i][j] === null) {
@@ -166,27 +168,39 @@ function running(){
                 ] 
                 running()
             }
+            if(pyramid[i][j] === 1){
+                if(isAdjacentToOne(i, j) === false){
+                    pyramid = [
+                        [null],
+                        [null,null],
+                        [null,null,null],
+                        [null,null,null,null]
+                    ] 
+                    running()
+                }
+            }
+
         }
     }
-
+//isAdjacentToOne(i, j)
+    
     
 }
 
-
 function startGame(){
     //arrange the Board Triangle base is 4 height of 4 
-    for(let r = 0; r <= 4; r++){
+    for(let rownum = 0; rownum < pyramid.length; rownum++){
         let row = []
-        for(let c = 0; c < lengthers; c++){
-            if(pyramid[r][c]===1){
+        for(let colnum = 0; colnum < pyramid[rownum].length; colnum++){
+            if(pyramid[rownum][colnum]===1){
                 cardImg = "./IMG/1.jpeg"
-            } else if(pyramid[r][c]===2){
+            } else if(pyramid[rownum][colnum]===2){
                 cardImg = "./IMG/2.jpeg"
-            }else if(pyramid[r][c]===3){
+            }else if(pyramid[rownum][colnum]===3){
                 cardImg = "./IMG/3.jpeg"
-            }else if(pyramid[r][c]===4){
+            }else if(pyramid[rownum][colnum]===4){
                 cardImg = "./IMG/4.jpeg"
-            }else if(pyramid[r][c]===6){
+            }else if(pyramid[rownum][colnum]===6){
                 cardImg = "./IMG/6.jpeg"
             }
             
@@ -194,17 +208,18 @@ function startGame(){
 
             let card = document.createElement("img")
             //<img id="0-0" class="card">
-            card.id = r.toString() +"-"+ c.toString()
+            card.id = rownum.toString() +"-"+ colnum.toString()
             card.src = cardImg
             card.classList.add("card")
             card.addEventListener("click", selectCard)
-            document.getElementById("row"+r).append(card)
+            document.getElementById("row"+rownum).append(card)
         }
         lengthers++ 
         board.push(row)
         
     }
-    
+
+    console.log(pyramid)
     console.log(board)
     hideCards()
 }
@@ -247,15 +262,13 @@ function selectCard(){
     }
 }
 
-
 function hideCards(){
-    console.log("running")
-    for (let r = 0; r < height; r++){
-        for(let c = 0;c < numhide ;c++){
+
+    for (let r = 0; r < pyramid.length; r++){
+        for(let c = 0;c < pyramid[r].length ;c++){
             let card = document.getElementById(r.toString()+ "-" + c.toString())
             card.src = "./IMG/back.jpeg"
         }
-        numhide++
     }
 }
 

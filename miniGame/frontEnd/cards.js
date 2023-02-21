@@ -51,7 +51,6 @@ function shuffleCards(){
     }
 }
 
-
 function startGame(){
     //arrange the Board Triangle base is 4 height of 4 
     for(let r = 0; r < height; r++){
@@ -124,8 +123,6 @@ function selectCard(){
         }
     }
 }
-
-
 
 function showCards(){
     document.querySelectorAll(".card").forEach(element =>{

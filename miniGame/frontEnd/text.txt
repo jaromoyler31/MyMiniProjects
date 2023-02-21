@@ -1,0 +1,25 @@
+-Create a Pyramid With 10 Cards With the Base of 4 and Height of 4
+The 10 cards are: 1,1,1,2,2,2,3,3,4,6
+-In This Pyramid Create Me a Random Order of Cards But Each Card Must follow a Certain Guide Line  
+        -1: The ones Must Be Touching Touching Each other   
+        -2: The Two Can Not Be Touching Each Other 
+        -3: The Three's Have to Be on Different Rows
+        -4: The Four Has to be on The First 2 Rows 
+        -6: The Six Can Be Anywhere
+
+Examples of Working Pyramids:            Examples of Non-Working Pyramids:
+
+    4           3           2           |       4           6           2           |
+   3 2         2 4         4 6          |      1 2         2 1         2 6          |
+  2 1 1       3 6 1       3 1 1         |     2 3 2       3 3 4       3 1 1         |
+ 3 6 1 2     2 1 1 2     2 1 2 3        |    3 6 1 1     2 1 1 2     2 1 4 3        |
+---------------------------------       |   ---------------------------------       |
+    2           6           4           |
+   1 4         4 3         1 1          |
+  2 1 3       1 2 3       3 2 1         |
+ 3 1 6 2     2 1 1 2     2 6 3 2        |
+ --------------------------------       |
+    3           4           2           |
+   4 2         1 2         4 1          |
+  2 1 1       2 1 3       1 1 3         |
+ 3 1 2 6     6 1 2 3     6 2 3 2        |

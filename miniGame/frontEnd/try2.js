@@ -28,7 +28,6 @@ function shuffleCards(){
 
     
     }
-    console.log(cardSet)
 }
 
 window.onload =function(){
@@ -49,18 +48,18 @@ const isAdjacentToOne = (i, j) => {
     return false;
   };
 
-  const isAdjacentToTwo = (i, j) => {
-    const adjacentCoords = [    [i-1, j-1], [i-1, j], [i-1, j+1], [i, j-1], [i, j+1], [i+1, j], [i+1, j+1], [i+1, j-1]
-    ];
-    for (const [row, col] of adjacentCoords) {
-      if (row >= 0 && row < pyramid.length && col >= 0 && col < pyramid[row].length) {
-        if (pyramid[row][col] === 2) {
-          return true;
-        }
-      }
+const isAdjacentToTwo = (i, j) => {
+const adjacentCoords = [    [i-1, j-1], [i-1, j], [i-1, j+1], [i, j-1], [i, j+1], [i+1, j], [i+1, j+1], [i+1, j-1]
+];
+for (const [row, col] of adjacentCoords) {
+if (row >= 0 && row < pyramid.length && col >= 0 && col < pyramid[row].length) {
+    if (pyramid[row][col] === 2) {
+    return true;
     }
-    return false;
-  };
+}
+}
+return false;
+};
 
 function running(){
     let ending = false
@@ -101,26 +100,28 @@ function running(){
                 }
             }
             }else if (num === 3) {
-
+                let hit = false
                 let end = false
                 for (let i = 0; i < pyramid.length; i++) {
                     if(end === true ){
                         break
                     }
                     for (let j = 0; j < pyramid[i].length; j++) {
-                        if (pyramid[i][j] === null) {
-                            for(let q = 0; q < pyramid[i].length; q++){
-                                if (pyramid[i][q] === 3) {
-                                    i++
-                                    j=0
-                                    break
-                                }
+                        if(end === true ){
+                            break
+                        }
+                        if (pyramid[i][j] === null) {         
+                            for(let q = 0; q <pyramid[i].length; q++){
+                                if(pyramid[i][q] === 3){
+                                    hit = true
+                                }   
+                            }   
+                            if(hit ===false){
+                                pyramid[i][j] = 3;
+                                end = true
+                                break;
                             }
-                                        
-                            pyramid[i][j] = 3;
-                            end = true
-                            break;
-                            
+                            break
                         }
                     }
                 }
@@ -218,9 +219,6 @@ function startGame(){
         board.push(row)
         
     }
-
-    console.log(pyramid)
-    console.log(board)
     hideCards()
 }
 
@@ -233,7 +231,6 @@ function selectCard(){
             let c = parseInt(coords[1])
             cardSelected1.src = board[r][c]
 
-            console.log(coords[0]+"-"+coords[1])
         }
         else if(!cardSelected2){
             cardSelected2 = this
@@ -241,7 +238,6 @@ function selectCard(){
             let r = parseInt(coords[0])
             let c = parseInt(coords[1])
             cardSelected2.src = board[r][c]
-            console.log(coords[0]+"-"+coords[1])
         }
         else if(!cardSelected3){
             cardSelected3 = this
@@ -249,7 +245,6 @@ function selectCard(){
             let r = parseInt(coords[0])
             let c = parseInt(coords[1])
             cardSelected3.src = board[r][c]
-            console.log(coords[0]+"-"+coords[1])
         }
         else if(!cardSelected4){
             cardSelected4 = this
@@ -257,7 +252,6 @@ function selectCard(){
             let r = parseInt(coords[0])
             let c = parseInt(coords[1])
             cardSelected4.src = board[r][c]
-            console.log(coords[0]+"-"+coords[1])
         }
     }
 }

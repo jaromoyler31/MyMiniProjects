@@ -19,10 +19,9 @@ var num = 1
 var numhide = 1
 var cardSelected1
 var cardSelected2
-var cardSelected3
-var cardSelected4
-var cardRevial
-
+var cardSwap = 1
+var firstCard
+var secondCard
 
 window.onload =function(){
     shuffleCards()
@@ -58,7 +57,7 @@ function startGame(){
             card.id = r.toString() +"-"+ c.toString()
             card.src = cardImg
             card.classList.add("card")
-            // card.addEventListener("click", selectCard)
+            card.addEventListener("click", selectCard)
             document.getElementById("row"+r).append(card) 
         }
         num++ 
@@ -70,4 +69,28 @@ function startGame(){
 
 function reload(){
     location.reload()
+}
+
+const selectCard = e =>{
+    
+    if(cardSwap === 1){
+        firstCard = e.target.id
+        e.target.style.borderColor = "blue"
+        cardSwap = 2
+    }else if(e.target.id === firstCard){
+        console.log("That the Same Card")
+    } else{
+        secondCard = e.target.id
+        const swap1 = document.getElementById(firstCard).src
+        const swap2 = document.getElementById(secondCard).src
+        const swap1link = swap1.split("/IMG")
+        const swap2link = swap2.split("/IMG")
+        document.getElementById(firstCard).style.borderColor = "black"
+
+        document.getElementById(firstCard).src = "/IMG"+swap2link[1]
+        document.getElementById(secondCard).src = "/IMG"+swap1link[1]
+        
+        cardSwap = 1
+    }
+
 }

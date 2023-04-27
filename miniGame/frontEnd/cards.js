@@ -12,7 +12,6 @@ var cardlist = [
 ]
 
 var cardSet 
-
 var board = []
 var height = 4
 var num = 1
@@ -50,7 +49,6 @@ function startGame(){
         for(let c = 0; c < num; c++){
             let cardImg = cardSet.pop()
             row.push(cardImg); //js
-            console.log(cardImg)
 
             let card = document.createElement("img")
             //<img id="0-0" class="card">
@@ -64,7 +62,6 @@ function startGame(){
         board.push(row)
         
     }
-    console.log(board)
 }
 
 function reload(){

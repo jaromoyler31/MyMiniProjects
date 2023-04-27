@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Sun", "Mon", "Tue", "Wend", "Thur", "Fri", "Sat"];
+var yValues = [0, 8, 8, 2, 2, 6, 5];
+var barColors = ["Purple", "Purple", "Purple", "Purple", "Purple", "Purple", "Purple",];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: 'Purple',
+      data: yValues 
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+
+      yAxes: [{ticks: {min: 0, max:12}}],
+    },
+    title: {
+      display: true,
+      text: "Work Hours This Week"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+

@@ -49,7 +49,7 @@ const isAdjacentToOne = (i, j) => {
   };
 
 const isAdjacentToTwo = (i, j) => {
-const adjacentCoords = [    [i-1, j-1], [i-1, j], [i-1, j+1], [i, j-1], [i, j+1], [i+1, j], [i+1, j+1], [i+1, j-1]
+const adjacentCoords = [    [i-1, j-1], [i-1, j], [i, j-1], [i, j+1], [i+1, j], [i+1, j+1], 
 ];
 for (const [row, col] of adjacentCoords) {
 if (row >= 0 && row < pyramid.length && col >= 0 && col < pyramid[row].length) {

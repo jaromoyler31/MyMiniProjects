@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./IMG/crown.png" />
+    <link rel="stylesheet" type="text/css" href="./CSS/style2.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Court</title>
+    <script src="https://kit.fontawesome.com/4d02def751.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <script src="try2.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let random = 0;
+        let images = ["IMG/backgroundImages/mossyCastle.jpg","IMG/backgroundImages/2house.jpg","IMG/backgroundImages/RiverLakeCastle.jpg","IMG/backgroundImages/fort.jpg"]
+        setInterval(function(){
+    
+            if(random > images.length-2){
+                random = 0
+                console.log(random)
+            }else{
+                random++
+                console.log(random)
+            }
+
+
+            document.body.style.backgroundImage = "url("+images[random]+")";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundAttachment = "fixed";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.width = "90%";
+            document.body.style.transition = "5s";
+            document.body.style.backgroundPosition ="top"
+        } ,11000);
+    </script>
+<!-- "IMG/backgroundImages/MountainCastle.jpg","IMG/backgroundImages/sunSetCastle.jpg" -->
+    <div class="box">
+        <div class="inside">
+            <h1>Royal Kingdom</h1>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+        

@@ -1,0 +1,24 @@
+body {
+    background-image: url('../IMG/backgroundImages/mossyCastle.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 5s;
+    width: 90%;
+}
+
+.box{
+    width: 400px;
+    height:200px;
+    background-color: rgb(255, 255,255, .6);
+    position: fixed;
+    left: 30px;
+    top:30px;
+    border-radius: 20px;
+    
+    .inside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

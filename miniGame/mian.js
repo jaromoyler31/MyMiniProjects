@@ -17,6 +17,10 @@ app.get("/create", (req,res)=>{
     res.sendFile(path.join(__dirname+"/frontEnd/cards.html"))
 })
 
+app.get("/startPage", (req,res)=>{
+    res.sendFile(path.join(__dirname+"/frontEnd/startPage.html"))
+})
+
 app.listen(3000, ()=>{
     console.log("Listening To Port 3000")
 })

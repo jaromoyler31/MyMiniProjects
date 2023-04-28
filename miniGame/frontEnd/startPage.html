@@ -16,6 +16,8 @@
 </head>
 
 <body>
+    <audio id="sound" src="./sound/Sound-for-Royal-court.mp3" loop="loop"></audio>
+
     <script type="text/javascript">
         let random = 0;
         let images = ["IMG/backgroundImages/mossyCastle.jpg","IMG/backgroundImages/2house.jpg","IMG/backgroundImages/RiverLakeCastle.jpg","IMG/backgroundImages/fort.jpg"]
@@ -29,7 +31,6 @@
                 console.log(random)
             }
 
-
             document.body.style.backgroundImage = "url("+images[random]+")";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundAttachment = "fixed";
@@ -38,6 +39,10 @@
             document.body.style.transition = "5s";
             document.body.style.backgroundPosition ="top"
         } ,11000);
+
+        window.onload = function() {
+            document.getElementById("sound").play();
+        }       
     </script>
 <!-- "IMG/backgroundImages/MountainCastle.jpg","IMG/backgroundImages/sunSetCastle.jpg" -->
     <div class="box">

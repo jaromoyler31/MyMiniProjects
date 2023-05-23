@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./IMG/crown.png" />
+    <link rel="stylesheet" type="text/css" href="./CSS/style2.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Kingdom</title>
+    <script src="https://kit.fontawesome.com/4d02def751.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <script src="startPage.js"></script>
+</head>
+
+<body>
+    
+    <audio id="sound" loop="loop" >
+        <source src="./sound/Sound-for-Royal-court.mp3" type="audio/mpeg">
+    </audio>
+
+       
+    <div class="layout">
+        <div class="side">
+            <div class="box1">
+                <div class="inside">
+                    <h2>Royal Kingdom <i class="fa-sharp fa-solid fa-volume-xmark bob" id="volume" onclick="clicked()"></i></h2>
+                    <button onclick="showCards()" class="button">Compare Decks</button>
+                </div>
+                
+            </div>
+            
+            <div class="rules">
+                <h2 class="ruleTittle">Rules </h2>
+                <p>The game is played with 10 cards - three 1's, three 2's, two 3's, one 4, and one 6.</p>
+                <p>At the start of the game, a deck of cards is created by randomly arranging the 10 cards in a pyramid shape with a base of 4 and a height of 4.</p>
+                <p>The Deck will follow the guidelines for each card when arranging the deck:</p><p>1's must be touching each other<br>2's cannot be touching each other<br>3's must be on different rows<br>4 must be on the top 2 rows<br>6 can be placed anywhere</p>
+                <p>You will take turns flipping over four cards from the deck, You will then have to create their own deck based on how they think the original deck was arranged.</p>
+                <p>Your deck will also follow the guidelines for each card when creating their own deck.</p><p>Once you finished making your deck you will compare your results to the original results</p>
+                <h2 class="ruleTittle">Points </h2>
+                <p>For every row, you get 100% correct, you will get the 1 points per card in that row. For example, if you get all cards in row 2 correct, you will receive 2 points</p>
+                <p>You will also receive additional points for any cards in the correct position, regardless of which row they are in. Each correctly placed card will earn you the number on the card for points.</p>
+                <p>The maximum number of points you can get is 35.</p>
+            </div>
+        </div>
+        
+
+        <div class="main">
+            <h1>The Deck</h1>
+            <div id="board" class="board">
+                <div id="row0" class="center"></div>
+                <div id="row1" class="center"></div>
+                <div id="row2" class="center"></div>
+                <div id="row3" class="center"></div>
+           </div>
+           <div class="score">
+
+               <table>
+                    <tr>
+                        <th>   </th>
+                        <th>Round 1</th>
+                        <th>Round 2</th>
+                        <th>Round 3</th>
+                        <th>Round 4</th>
+                        <th>Round 5</th>
+                        <th>Total:</th>
+                    </tr>
+                    <tr>
+                        <th>Points:   </th>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+               </table>
+           </div>
+            <button onclick="reload()" class="button">New Game</button>
+            
+        </div>
+    </div>
+    
+</body>
+
+</html>
+
+
+        

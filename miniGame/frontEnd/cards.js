@@ -83,10 +83,8 @@ const selectCard = e =>{
         const swap1link = swap1.split("/IMG")
         const swap2link = swap2.split("/IMG")
         document.getElementById(firstCard).style.borderColor = "black"
-
         document.getElementById(firstCard).src = "/IMG"+swap2link[1]
         document.getElementById(secondCard).src = "/IMG"+swap1link[1]
-        
         cardSwap = 1
     }
 

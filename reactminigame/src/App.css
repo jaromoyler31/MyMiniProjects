@@ -1,5 +1,8 @@
+/* entire Screen -- entire Screen */
+/* entire Screen -- entire Screen */
+
 body {
-  background-image: url("../IMG/backgroundImages/mossyCastle.jpg");
+  background-image: url("./IMG/backgroundImages/mossyCastle.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -14,14 +17,12 @@ body {
   flex-direction: row;
 }
 
-.side {
-  max-height: 100%;
-  width: 25%;
-}
+/* Side Screen -- Side Screen  */
+/* Side Screen -- Side Screen  */
 
 .box {
   height: 15%;
-  width: 20%;
+  width: 30%;
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
@@ -31,6 +32,7 @@ body {
   margin-top: 25px;
   border-radius: 20px;
 }
+
 .box .button {
   margin-top: 4px;
   border-radius: 10px;
@@ -50,6 +52,7 @@ body {
   margin: 20px;
   border-radius: 20px;
 }
+
 .box1 .button {
   margin-top: 4px;
   border-radius: 10px;
@@ -68,65 +71,19 @@ body {
   margin: 20px;
   border-radius: 20px;
   word-wrap: break-word;
-  overflow: scroll;
 }
+
 .rules .ruleTittle {
   text-align: center;
 }
 
-.main {
-  width: 75%;
+.side {
   max-height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 9px;
-  margin: 20px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.main .board {
-  padding-bottom: 20px;
-}
-.main .button {
-  margin-top: 4px;
-  border-radius: 10px;
-  background-color: rgb(38, 61, 147);
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.95px 2.95px 2.6px;
-  width: 30%;
-  margin-bottom: 5px;
-  font-size: 30px;
+  width: 40%;
 }
 
-.center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.card {
-  width: 120px;
-  height: 168px;
-  border: 3px solid black;
-  margin: 3px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.card2 {
-  width: 25.5px;
-  height: 45px;
-  border: 1px solid black;
-  background-image: url("../IMG/back.jpeg");
-  margin: 1px;
-  border-radius: 10px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-}
+/* Main Screen -- Main Screen  */
+/* Main Screen -- Main Screen  */
 
 #board {
   display: flex;
@@ -137,6 +94,14 @@ body {
 
 .main {
   position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  border-radius: 20px;
+  margin: 20px 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
@@ -147,7 +112,8 @@ table {
   margin-bottom: 30px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid rgb(38, 61, 147);
   text-align: left;
   padding: 8px;
@@ -158,4 +124,57 @@ tr:nth-child(even) {
   color: #dddddd;
 }
 
-/*# sourceMappingURL=style2.css.map */
+.card {
+  width: 120px;
+  height: 168px;
+  border: 3px solid black;
+  margin: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card2 {
+  width: 25.5px;
+  height: 45px;
+  border: 1px solid black;
+  background-image: url("./IMG/back.jpeg");
+  margin: 1px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.submitBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 500px;
+  background-color: rgba(38, 61, 147, 0.5);
+  border-radius: 20px;
+  color: black;
+  padding: 30px;
+}
+
+.x{
+  position: fixed;
+  top:0;
+  right:0;
+  margin-top:25px;
+  margin-right:25px;
+  background-color:white;
+  font-weight:900;
+  padding:7px 10px 7px 10px;
+  border-radius:50px;
+  cursor: pointer;
+}
